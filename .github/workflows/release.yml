@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package mvp-roadmap.skill
+        run: |
+          cd skills
+          zip -r -X -D ../mvp-roadmap.skill mvp-roadmap -x '*.DS_Store'
+          cd ..
+          unzip -l mvp-roadmap.skill
+
+      - name: Create GitHub Release and attach artifact
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "$GITHUB_REF_NAME" mvp-roadmap.skill --generate-notes
