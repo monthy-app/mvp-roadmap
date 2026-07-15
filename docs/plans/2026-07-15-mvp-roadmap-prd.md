@@ -42,7 +42,7 @@ The `skills/<name>/` layout means a second skill is a sibling directory sharing 
 | Surface | Primary user | What's on it |
 |---|---|---|
 | Claude Code skill | human dev | `/mvp-roadmap` user-invoked interview; model-invoked for tick-offs and doc updates |
-| skills.sh install | human dev | `npx skills add monthy-app/mvp-roadmap` copies a hackable version into the project |
+| skills.sh install | human dev | `npx skills add oxmonty/mvp-skills` copies a hackable version into the project |
 | `.skill` release artifact | claude.ai user | packaged bundle attached to GitHub Releases, importable via Save skill |
 | Other Agent-Skills harnesses | human dev | inherited for free via skills.sh; no harness-specific code |
 

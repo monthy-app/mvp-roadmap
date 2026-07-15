@@ -1,11 +1,11 @@
 # mvp-roadmap
 
-> Repo: https://github.com/monthy-app/mvp-roadmap
+> Repo: https://github.com/oxmonty/mvp-skills
 
 mvp-roadmap is an agent skill (Agent Skills standard, Markdown) that interviews you section-by-section to turn an idea into a decision-complete MVP document set — a living `ROADMAP.md` and a dated PRD — and then keeps those documents truthful as work lands, with anti-accretive editing and a propose-then-tick roadmap protocol. Unlike process-owning frameworks (BMAD, Spec-Kit) or full methodologies (superpowers), it owns only the document: one small, hackable skill producing a single source of truth.
 
 ```
-npx skills add monthy-app/mvp-roadmap   # install
+npx skills add oxmonty/mvp-skills   # install
 /mvp-roadmap                               # in any repo or empty dir: interview → ROADMAP.md + docs/plans/<date>-prd.md
 ```
 
@@ -44,7 +44,7 @@ Usable as:
 *MVP line — E1–E4 ship as v0.1: installable through both channels, self-hosting its own docs, with the linter and a small eval suite proving both modes.*
 
 - [ ] **E5: Claude Code plugin packaging** — `.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [Distribution](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)
-    - [ ] Plugin manifest and `/plugin marketplace add monthy-app/mvp-roadmap` verified
+    - [ ] Plugin manifest and `/plugin marketplace add oxmonty/mvp-skills` verified
     - [ ] README documents the two install philosophies (hackable copy vs managed bundle)
 
 **Future (considered, unscheduled)**: automated eval runs in CI via the skill-creator harness ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)); growth path to a multi-skill collection if a second skill materializes ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#scope)); Codex-native plugin manifest ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)).

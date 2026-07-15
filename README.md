@@ -7,7 +7,7 @@ An agent skill (Agent Skills standard, Markdown) that interviews you section-by-
 ## Install
 
 ```sh
-npx skills add monthy-app/mvp-roadmap
+npx skills add oxmonty/mvp-skills
 ```
 
 Then, in any repo or empty directory:
@@ -16,7 +16,7 @@ Then, in any repo or empty directory:
 /mvp-roadmap   # interview → ROADMAP.md + docs/plans/<date>-prd.md
 ```
 
-Works anywhere the Agent Skills standard does: user-invoked `/mvp-roadmap` in Claude Code, a packaged `mvp-roadmap.skill` imported into claude.ai from a [Release](https://github.com/monthy-app/mvp-roadmap/releases), or any other harness via the skills.sh installer.
+Works anywhere the Agent Skills standard does: user-invoked `/mvp-roadmap` in Claude Code, a packaged `mvp-roadmap.skill` imported into claude.ai from a [Release](https://github.com/oxmonty/mvp-skills/releases), or any other harness via the skills.sh installer.
 
 ## How it works
 
