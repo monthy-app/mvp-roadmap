@@ -1,0 +1,15 @@
+{
+  // These docs are prose by design. markdownlint runs as a structural safety
+  // net (unclosed fences, broken tables, malformed frontmatter), not a prose
+  // reformatter, so the rules that fight the docs' deliberate style are off.
+  "MD013": false,                    // long prose lines are intentional
+  "MD007": false,                    // the roadmap nests stories at 4 spaces
+  "MD022": false,                    // sections pack headings tight to content
+  "MD032": false,                    // lists sit flush against surrounding prose
+  "MD034": false,                    // the "> Repo:" line carries a bare URL
+  "MD040": false,                    // ascii pipelines use unlabelled fences
+  "MD041": false,                    // CLAUDE.md is a one-line pointer file
+  "MD059": false,                    // "[here]" is the roadmap's link convention
+  "MD060": false,                    // table column styling is the author's call
+  "MD024": { "siblings_only": true } // "Create/Update mode" recur under different parents
+}
