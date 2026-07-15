@@ -109,7 +109,7 @@ Channels: skills.sh (public repo with skills under `skills/` is the discoverable
 
 **Quality gates (every PR):** SKILL.md frontmatter validation, markdownlint, `check-doc.sh` against ROADMAP.md and the current PRD, link check. All required.
 
-**Versioning:** semver git tags; a breaking change is anything that alters the documented interview contract or the linter's pass/fail behavior on previously-passing docs.
+**Versioning:** semver git tags; a breaking change is anything that alters the documented interview contract or the linter's pass/fail behavior on previously-passing docs. <!-- accretion-ok: versioning policy, "previously-passing" is spec not history -->
 
 ```
 tag push (vX.Y.Z) ──▶ package mvp-roadmap.skill ──▶ GitHub Release + artifact ──▶ release notes include eval pass/fail table

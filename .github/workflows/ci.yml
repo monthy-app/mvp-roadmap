@@ -37,3 +37,6 @@ jobs:
 
       - name: Lint Markdown
         run: npx --yes markdownlint-cli2@0.23.0 "**/*.md"
+
+      - name: Check living docs (self-hosting gate)
+        run: bash scripts/check-doc.sh ROADMAP.md docs/plans/*.md
