@@ -23,4 +23,7 @@ jobs:
       - name: Create GitHub Release and attach artifact
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "$GITHUB_REF_NAME" mvp-roadmap.skill --generate-notes
+        run: |
+          prerelease=""
+          case "$GITHUB_REF_NAME" in *-*) prerelease="--prerelease";; esac
+          gh release create "$GITHUB_REF_NAME" mvp-roadmap.skill --generate-notes $prerelease
