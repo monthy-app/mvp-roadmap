@@ -24,11 +24,11 @@ Usable as:
     - [x] Release workflow packages `mvp-roadmap.skill` and attaches it to a GitHub Release on tag
     - [x] Verified install: `npx skills add monthy-app/mvp-roadmap` in a clean directory, skill triggers on "spec out this MVP"
 
-- [ ] **E2: Doc linter** — `scripts/check-doc.sh` mechanically enforces the document invariants the skill promises. → [Validation strategy](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
-    - [ ] Accretion-tell grep over doc body text with an allowlist for legitimate policy prose
-    - [ ] Roadmap link/anchor resolution check, including cross-file `docs/plans/*#anchor` links
-    - [ ] Structural checks: MVP line present, ≤6 stories per epic, every epic links to a real section
-    - [ ] CI runs check-doc.sh against this repo's own ROADMAP.md and PRD (self-hosting gate)
+- [x] **E2: Doc linter** — `scripts/check-doc.sh` mechanically enforces the document invariants the skill promises. → [Validation strategy](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
+    - [x] Accretion-tell grep over doc body text with an allowlist for legitimate policy prose
+    - [x] Roadmap link/anchor resolution check, including cross-file `docs/plans/*#anchor` links
+    - [x] Structural checks: MVP line present, ≤6 stories per epic, every epic links to a real section
+    - [x] CI runs check-doc.sh against this repo's own ROADMAP.md and PRD (self-hosting gate)
 
 - [ ] **E3: Create-mode evals** — golden briefs prove the interview produces valid documents without hand-holding. → [Validation strategy](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
     - [ ] Three golden briefs committed under tests/ (CLI tool, hosted API, library) with expected structural assertions
