@@ -27,7 +27,7 @@ anchors_of() {
   grep -E '^#{1,6}[[:space:]]+' "$1" 2>/dev/null \
     | sed -E 's/^#{1,6}[[:space:]]+//' \
     | tr '[:upper:]' '[:lower:]' \
-    | sed -E 's/[^a-z0-9 _-]//g; s/[[:space:]]+/-/g'
+    | sed -E 's/[^a-z0-9 _-]//g; s/ /-/g'
 }
 # ponytail: no duplicate-heading -1/-2 suffixing; add it if a doc ever links to
 # the second occurrence of a repeated heading.
