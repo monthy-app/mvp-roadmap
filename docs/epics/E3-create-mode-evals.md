@@ -6,4 +6,4 @@ Golden briefs prove the `/mvp` interview produces valid documents without hand-h
 
 - [x] Three golden briefs committed under tests/ (CLI tool, hosted API, library) with expected structural assertions
 - [x] Assertions runnable via check-doc.sh plus per-brief expectations (e.g. API section present only for the API brief)
-- [ ] One recorded transcript per brief reviewed for question quality: one decision per turn, recommendation always present
+- [x] One recorded transcript per brief reviewed for question quality: one decision per turn, recommendation always present

@@ -24,8 +24,8 @@ Each epic's stories, status, and spec link live in its file under [`docs/epics/`
 
 - [x] **E1: Walking skeleton** — the flagship skill installs through both planned channels and triggers end-to-end in a clean project. → [E1](docs/epics/E1-walking-skeleton.md)
 - [x] **E2: Doc linter** — `scripts/check-doc.sh` mechanically enforces the document invariants the skills promise. → [E2](docs/epics/E2-doc-linter.md)
-- [ ] **E3: Create-mode evals** — golden briefs prove the `/mvp` interview produces valid documents without hand-holding. → [E3](docs/epics/E3-create-mode-evals.md)
-- [ ] **E4: Update-mode evals** — the tick protocol and edit propagation behave under test; they pin `/wrap-up`'s editing behavior. → [E4](docs/epics/E4-update-mode-evals.md)
+- [x] **E3: Create-mode evals** — golden briefs prove the `/mvp` interview produces valid documents without hand-holding. → [E3](docs/epics/E3-create-mode-evals.md)
+- [x] **E4: Update-mode evals** — the tick protocol and edit propagation behave under test; they pin `/wrap-up`'s editing behavior. → [E4](docs/epics/E4-update-mode-evals.md)
 - [x] **E5: /mvp entrypoint** — the flagship skill is the collection's front door, and its roadmaps are artifact-first. → [E5](docs/epics/E5-mvp-entrypoint.md)
 - [x] **E6: wrap-up skill** — one command closes a working session with honest documents. → [E6](docs/epics/E6-wrap-up-skill.md)
 
