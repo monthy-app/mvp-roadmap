@@ -11,7 +11,7 @@ harness), not installed runtime. Automating this in CI is deliberately deferred
   question at a time, in persona. Defaults to the recommended option; deviates
   only where the brief's `## Answers` says. Never volunteers unasked information
   and never sees `## Expect`. It is standing in for a real user.
-- **Skill-runner** — given `../skills/mvp-roadmap/` and an empty scratch working
+- **Skill-runner** — given `../skills/mvp/` and an empty scratch working
   directory, runs create mode: surveys (the dir is empty), interviews one
   decision per turn, drafts as it goes, synthesizes the roadmap last, and writes
   `ROADMAP.md` + `docs/plans/<date>-prd.md`. It knows only what the player tells
