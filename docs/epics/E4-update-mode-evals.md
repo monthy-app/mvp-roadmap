@@ -7,3 +7,4 @@ The tick protocol and edit propagation behave under test; they pin `/wrap-up`'s 
 - [ ] Fixture: doc + fake work evidence → skill proposes exactly the evidenced ticks, asks before striking
 - [ ] Fixture: changed decision → owning section, linked stories, and echoes all rewritten; accretion grep comes back clean
 - [ ] Fixture: tick edit touches checkbox characters only (diff assertion)
+- [ ] Fixture: thin-index layout (ROADMAP index + docs/epics/ files) → ticks land in the epic's own file, index epic-line ticked only when all its stories are

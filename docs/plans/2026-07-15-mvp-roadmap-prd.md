@@ -61,7 +61,7 @@ Each companion skill is specified in [Features](#features). Skills stay flat und
 Validating a skill means validating documents it produces and edits it makes — both mechanically checkable — plus interview quality, which needs eyes. Three tiers, plus self-hosting as the standing proof:
 
 1. **Doc invariants** (primary/cheap/objective) — `scripts/check-doc.sh`: accretion tells absent from body text, all roadmap links resolve, MVP line present, ≤6 stories/epic, every epic links to a real section. Runs in CI on this repo's own docs.
-2. **Golden-brief evals** (the metric that matters) — three committed briefs (CLI tool, hosted API, library) run through create mode; outputs must pass tier 1 plus per-brief expectations (skip logic fired correctly, walking-skeleton E1 present). Update-mode fixtures assert tick discipline and edit propagation.
+2. **Golden-brief evals** (the metric that matters) — three committed briefs (CLI tool, hosted API, library) run through create mode; outputs must pass tier 1 plus per-brief expectations (skip logic fired correctly, walking-skeleton E1 present). Update-mode fixtures assert tick discipline and edit propagation, in both the two-file shape and the thin-index epic-file layout (a tick must land in the epic's own file).
 3. **Transcript review** (tertiary, human) — per golden brief, one recorded transcript reviewed against the interview rules: one decision per turn, recommendation always offered, no survey-answerable questions.
 
 Shipped as: `./scripts/check-doc.sh <files>` in CI, plus `tests/` run manually via the skill-creator harness → pass/fail table in the release notes.
