@@ -7,8 +7,10 @@ A collection of agent skills (Agent Skills standard, Markdown) that carries a pr
 ## Install
 
 ```sh
-npx skills add oxmonty/product-engineering-skills --all
+npx skills add oxmonty/product-engineering-skills --all -g
 ```
+
+All five skills, every detected agent, user-level, no prompts. Drop `-g` to install into the current project instead (a hackable copy that travels with the repo).
 
 ## The loop
 
