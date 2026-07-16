@@ -4,5 +4,5 @@
 
 ## Stories
 
-- [ ] Plugin manifest and `/plugin marketplace add oxmonty/product-engineering-skills` verified
-- [ ] README documents the two install philosophies (hackable copy vs managed bundle)
+- [x] Plugin manifest and `/plugin marketplace add oxmonty/product-engineering-skills` verified
+- [x] README documents the two install philosophies (hackable copy vs managed bundle)

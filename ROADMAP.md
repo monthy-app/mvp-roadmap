@@ -35,6 +35,6 @@ Each epic's stories, status, and spec link live in its file under [`docs/epics/`
 - [x] **E7: epic skill** — `/epic E<n>` kicks off an epic from its PRD section; dogfooding on this repo's own epics is the feedback loop. → [E7](docs/epics/E7-epic-skill.md)
 - [x] **E8: demo-ideas skill** — every shipped epic gets something showable; demo requests are the user-signal channel. → [E8](docs/epics/E8-demo-ideas-skill.md)
 - [x] **E9: delegate skill** — implementation goes to the cheapest capable tier while judgment stays in the main loop. → [E9](docs/epics/E9-delegate-skill.md)
-- [ ] **E10: Claude Code plugin packaging** — `.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [E10](docs/epics/E10-plugin-packaging.md)
+- [x] **E10: Claude Code plugin packaging** — `.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [E10](docs/epics/E10-plugin-packaging.md)
 
 **Future (considered, unscheduled)**: automated eval runs in CI via the skill-creator harness ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)); Codex-native plugin manifest ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)).
