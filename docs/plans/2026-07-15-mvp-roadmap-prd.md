@@ -108,6 +108,7 @@ product-engineering-skills/
 ├── scripts/check-doc.sh         # doc linter (tier-1 validation); repo tooling, not skill payload
 ├── tests/                       # golden briefs + fixtures for create/update-mode evals
 ├── docs/plans/                  # dated PRDs — this file lives here; the repo dogfoods its own convention
+├── docs/epics/                  # one file per epic (E<n>-slug.md): stories, status, spec link; ROADMAP.md is the thin index
 ├── .claude-plugin/              # plugin manifest (lands with E10)
 ├── .github/workflows/           # ci.yml (gates), release.yml (.skill packaging)
 ├── CLAUDE.md / AGENTS.md        # instructions for agents working on this repo — including "maintain docs via these skills"
@@ -115,7 +116,7 @@ product-engineering-skills/
 └── ROADMAP.md                   # living, root, undated
 ```
 
-Principles: each SKILL.md stays under ~150 lines with depth pushed to references/; skill payload (`skills/`) is strictly separated from repo tooling (`scripts/`, `tests/`) — only the payload ships to users; the linter is the only code — everything else is prose; the repo's own docs pass the repo's own linter (self-hosting is a required CI gate, not a demo); paths inside a skill are relative to that skill's directory and never cross into a sibling skill, so each survives being copied alone into target projects.
+Principles: each SKILL.md stays under ~150 lines with depth pushed to references/; skill payload (`skills/`) is strictly separated from repo tooling (`scripts/`, `tests/`) — only the payload ships to users; the linter is the only code — everything else is prose; the repo's own docs pass the repo's own linter (self-hosting is a required CI gate, not a demo); paths inside a skill are relative to that skill's directory and never cross into a sibling skill, so each survives being copied alone into target projects; the roadmap splits by churn — `ROADMAP.md` is the thin index carrying epic order and the MVP cut, while each epic's stories live in their own `docs/epics/` file, so a tick's blast radius is one epic's file and concurrent sessions never collide on shared lines.
 
 ## Distribution
 

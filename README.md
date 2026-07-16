@@ -34,7 +34,8 @@ Each skill is also importable into claude.ai individually from the `.skill` bund
 
 ## Where things live
 
-- [`ROADMAP.md`](ROADMAP.md) — what's decided and what's done; the project's front page and living memory.
+- [`ROADMAP.md`](ROADMAP.md) — the epic index and MVP cut; the project's front page and living memory.
+- [`docs/epics/`](docs/epics/) — one file per epic: stories, status, and the spec link.
 - [`docs/plans/2026-07-15-mvp-roadmap-prd.md`](docs/plans/2026-07-15-mvp-roadmap-prd.md) — the specification each epic links into.
 - [`skills/`](skills/) — the collection: `mvp/`, `wrap-up/`, and the specified placeholders `epic/`, `demo-ideas/`, `delegate/`.
 

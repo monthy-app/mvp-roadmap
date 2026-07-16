@@ -10,9 +10,10 @@
 #   2. Every markdown link resolves. Relative paths are resolved from the
 #      file's own directory (so cross-file docs/plans/*#anchor links work), and
 #      every #fragment must match a real heading anchor in its target file.
-#   3. Roadmap structure, only for files that contain a roadmap: the MVP line
-#      is present, no epic carries more than six stories, and every epic links
-#      to a section.
+#   3. Roadmap structure. Index files (roadmap epic lines at column 0): the
+#      MVP line is present, no epic carries more than six inline stories, and
+#      every epic links somewhere. Epic files (H1 of the form "# E<n>: ..."):
+#      at most six stories, and a link into a plans/ section is present.
 #
 # Exit 0 if every file passes, 1 otherwise. grep/awk/sed only — no deps, so it
 # drops into any target project the same way it guards this one.
@@ -68,7 +69,14 @@ check_links() {
 }
 
 check_structure() {
-  local file="$1"
+  local file="$1" stories
+  if grep -qE '^# E[0-9]+:' "$file"; then                  # per-epic file
+    stories=$(grep -cE '^- \[[ x]\]' "$file")
+    [ "$stories" -gt 6 ] && printf "%s: structural -> %d stories (max 6)\n" "$file" "$stories"
+    grep -qE '\]\((\.\./|docs/)plans/' "$file" \
+      || printf "%s: structural -> no link into a plans/ section\n" "$file"
+    return 0
+  fi
   grep -qE '^- \[[ x]\] \*\*E[0-9]+' "$file" || return 0   # not a roadmap
   grep -qE 'MVP line' "$file" || printf "%s: structural -> MVP line marker missing\n" "$file"
   awk -v F="$file" '

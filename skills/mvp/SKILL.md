@@ -58,6 +58,8 @@ Why split: the roadmap is high-churn state (ticked constantly) while the PRD is 
 
 When splitting: `ROADMAP.md` gets the description, hero example, "Usable as" bullets, and the roadmap itself (it doubles as the project's front page); `PRD.md` gets Workflow, Surfaces, Validation, Features, API design, Project structure, Distribution, CI/CD, Additional considerations, Competitive landscape, Tech stack, References, License, Open questions. Delete the template's instructional blockquotes and HTML comments from instantiated docs.
 
+A third shape exists for large roadmaps (~10+ epics, or several sessions ticking concurrently): `ROADMAP.md` becomes a thin index — epic order, one-line outcomes, and the MVP cut — and each epic's stories live in their own `docs/epics/E<n>-<slug>.md` alongside its spec link, so a tick's blast radius is one epic's file. Offer it only when those conditions actually hold; two files is the right default.
+
 Ask the user which shape they want, with your recommendation, as the final interview question.
 
 ## The journey (close every create-mode session with this)
