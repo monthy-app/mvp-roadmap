@@ -14,25 +14,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate SKILL.md frontmatter
+      - name: Validate SKILL.md frontmatter (all skills)
         run: |
           python3 - <<'PY'
           import sys, pathlib
-          text = pathlib.Path("skills/mvp-roadmap/SKILL.md").read_text(encoding="utf-8")
-          if not text.startswith("---\n"):
-              sys.exit("SKILL.md: missing opening '---' frontmatter fence")
-          end = text.find("\n---", 4)
-          if end == -1:
-              sys.exit("SKILL.md: missing closing '---' frontmatter fence")
-          keys = [
-              line.split(":", 1)[0].strip()
-              for line in text[4:end].splitlines()
-              if ":" in line and not line[:1].isspace()
-          ]
-          for required in ("name", "description"):
-              if required not in keys:
-                  sys.exit(f"SKILL.md frontmatter: missing required key '{required}'")
-          print("SKILL.md frontmatter OK:", ", ".join(keys))
+          paths = sorted(pathlib.Path("skills").glob("*/SKILL.md"))
+          if not paths:
+              sys.exit("no skills/*/SKILL.md found")
+          for p in paths:
+              text = p.read_text(encoding="utf-8")
+              if not text.startswith("---\n"):
+                  sys.exit(f"{p}: missing opening '---' frontmatter fence")
+              end = text.find("\n---", 4)
+              if end == -1:
+                  sys.exit(f"{p}: missing closing '---' frontmatter fence")
+              fields = {}
+              for line in text[4:end].splitlines():
+                  if ":" in line and not line[:1].isspace():
+                      k, _, v = line.partition(":")
+                      fields[k.strip()] = v.strip()
+              for required in ("name", "description"):
+                  if required not in fields:
+                      sys.exit(f"{p}: frontmatter missing required key '{required}'")
+              if fields["name"] != p.parent.name:
+                  sys.exit(f"{p}: name '{fields['name']}' != directory '{p.parent.name}'")
+              print(f"{p} OK: {', '.join(fields)}")
           PY
 
       - name: Lint Markdown

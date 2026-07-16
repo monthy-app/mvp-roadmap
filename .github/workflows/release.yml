@@ -13,17 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Package mvp-roadmap.skill
+      - name: Package one .skill bundle per skill
         run: |
           cd skills
-          zip -r -X -D ../mvp-roadmap.skill mvp-roadmap -x '*.DS_Store'
+          for dir in */; do
+            name="${dir%/}"
+            zip -r -X -D "../${name}.skill" "$name" -x '*.DS_Store'
+          done
           cd ..
-          unzip -l mvp-roadmap.skill
+          ls -l ./*.skill
 
-      - name: Create GitHub Release and attach artifact
+      - name: Create GitHub Release and attach artifacts
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           prerelease=""
           case "$GITHUB_REF_NAME" in *-*) prerelease="--prerelease";; esac
-          gh release create "$GITHUB_REF_NAME" mvp-roadmap.skill --generate-notes $prerelease
+          gh release create "$GITHUB_REF_NAME" ./*.skill --generate-notes $prerelease
