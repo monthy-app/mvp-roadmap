@@ -121,7 +121,7 @@ Principles: each SKILL.md stays under ~150 lines with depth pushed to references
 
 ## Distribution
 
-Channels: skills.sh (public repo with skills under `skills/` is the discoverable shape — the same layout mattpocock and superpowers ship), and GitHub Releases carrying one packaged `.skill` bundle per skill for claude.ai import. Release automation: tag push → package each `skills/<name>/` → attach artifacts.
+Channels: skills.sh (public repo with skills under `skills/` is the discoverable shape — the same layout mattpocock and superpowers ship), GitHub Releases carrying one packaged `.skill` bundle per skill for claude.ai import, and a Claude Code plugin marketplace hosted by this repo (`.claude-plugin/`): one bundled plugin carrying all five skills — the loop is designed to be used together, so the managed channel installs it whole rather than à la carte. Release automation: tag push → package each `skills/<name>/` → attach artifacts.
 
 **Naming note:** the repo lives at `oxmonty/product-engineering-skills`; skills.sh addresses by `owner/repo`, so `npx skills add oxmonty/product-engineering-skills` is the whole install string and the repo path is the only thing it pins. The repo name names the domain; each skill keeps its own short invocation name (`/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`), clean as slash commands. No package-registry presence is planned, which removes the usual npm/PyPI check. Verified by the E5 clean-install story rather than by assertion.
 

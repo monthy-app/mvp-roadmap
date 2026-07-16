@@ -1,0 +1,14 @@
+{
+  "name": "product-engineering-skills",
+  "description": "Marketplace for the product-engineering-skills collection — idea to shipped artifact via a living ROADMAP + PRD and the build loop that keeps them truthful.",
+  "owner": {
+    "name": "oxmonty"
+  },
+  "plugins": [
+    {
+      "name": "product-engineering-skills",
+      "source": "./",
+      "description": "All five skills as one managed bundle: /mvp, /epic, /delegate, /demo-ideas, /wrap-up."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "product-engineering-skills",
+  "description": "Idea to shipped artifact: /mvp interviews you into a living ROADMAP + PRD; /epic, /delegate, /demo-ideas, and /wrap-up run the build loop against those documents and keep them truthful.",
+  "version": "0.1.0",
+  "author": {
+    "name": "oxmonty"
+  },
+  "homepage": "https://github.com/oxmonty/product-engineering-skills",
+  "license": "MIT",
+  "keywords": ["mvp", "roadmap", "prd", "planning", "product-engineering"]
+}
