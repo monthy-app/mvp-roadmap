@@ -13,7 +13,8 @@ Where change history legitimately belongs:
 - **Git** — every edit to these docs should be a commit with a message describing the change.
 - **Your chat summary** — narrate what changed and why to the user, in conversation.
 - **A changelog or announcement** — if the change is user-facing enough to warrant one, offer to write it as a separate artifact.
-- **The Open Questions log** — a resolved question keeps its answer there, as the record of what was decided and how; this is the one place in the doc where that history is preserved on purpose.
+- **The Open Questions log** — a resolved question keeps its answer there, as the record of what was decided and how; one of two places in the doc set where history is preserved on purpose.
+- **Epic write-ups** — when an epic completes, a dated, append-only narrative goes to `docs/write-ups/E<n>-<slug>.md`: what shipped, the evidence, the decisions made along the way, what surprised. Write-ups are history by definition, so the accretion rules do not police them — they are never passed to the doc linter and never feed back into spec prose.
 
 Never inline in the specification prose. "Now uses X (previously Y)", "no longer supports Z", "instead of the old approach" — each of these is history leaking into the spec body; the sanctioned homes above are where it belongs instead.
 
