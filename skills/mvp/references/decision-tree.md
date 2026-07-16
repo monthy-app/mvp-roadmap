@@ -65,6 +65,8 @@ Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmat
 
 ## Phase 10 — Closing → *License, Open questions, output shape*
 
+Nothing in this phase is asked until the Phase 9 roadmap is confirmed — license, open questions, and output shape are the interview's last three moves, in that order, shape always the final question. (Interviews reliably drift toward asking license early; hold the boundary.)
+
 - Q: license, with a recommendation fitted to the product's adoption strategy; note the decide-before-contributions warning.
 - Compile Open questions: only items with a forcing function, each annotated with the decision it blocks and what evidence resolves it. Anything resolved during the interview does not appear here.
 - Q: output shape — single `MVP.md` vs `ROADMAP.md` + `PRD.md` split (recommendation logic in SKILL.md Step 3).
