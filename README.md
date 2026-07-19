@@ -1,6 +1,6 @@
 # product-engineering-skills
 
-[![skills.sh](https://badgen.net/badge/skills.sh/oxmonty%2Fproduct-engineering-skills/black)](https://skills.sh/oxmonty/product-engineering-skills) [![Downloads](https://badgen.net/github/assets-dl/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
+[![skills.sh](https://badgen.net/badge/skills.sh/oxmonty%2Fproduct-engineering-skills/black?icon=vercel)](https://skills.sh/oxmonty/product-engineering-skills) [![Downloads](https://badgen.net/github/assets-dl/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
 
 > The document is the product.
 
