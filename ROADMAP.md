@@ -40,4 +40,4 @@ Each epic's stories, status, and spec link live in its file under [`docs/epics/`
 - [x] **E12: spike skill** — `/spike` settles one design question with measured evidence and a decision matrix folded into the PRD. → [E12](docs/epics/E12-spike-skill.md)
 - [x] **E13: regression skill** — `/regression` pins each epic's feature with a layered suite whose green run gates the tick. → [E13](docs/epics/E13-regression-skill.md)
 
-**Future (considered, unscheduled)**: automated eval runs in CI via the skill-creator harness ([here](docs/plans/2026-07-15-prd.md#validation-strategy)); Codex-native plugin manifest ([here](docs/plans/2026-07-15-prd.md#distribution)).
+**Future (considered, unscheduled)**: automated eval runs in CI via the skill-creator harness ([here](docs/plans/2026-07-15-prd.md#validation-strategy)); Codex-native plugin manifest ([here](docs/plans/2026-07-15-prd.md#distribution)); README badge upgrades — swap the static skills.sh badge for the dynamic `skills.sh/b/` endpoint and the downloads badge for shields' all-versions total, once both services are healthy again.
