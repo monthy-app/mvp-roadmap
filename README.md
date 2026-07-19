@@ -1,5 +1,7 @@
 # product-engineering-skills
 
+[![Latest release](https://img.shields.io/github/v/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
+
 > The document is the product.
 
 A collection of agent skills (Agent Skills standard, Markdown) that carries a product from idea to shipped artifact: an interview that produces a decision-complete MVP document set — a living `ROADMAP.md` and a dated PRD — and a build loop that runs against those documents and keeps them truthful as work lands.
@@ -26,13 +28,13 @@ Two install philosophies, pick by how you want updates:
 
 | Command | When | Does |
 |---|---|---|
-| `/mvp` | day zero, in any repo or empty dir | section-by-section interview → `ROADMAP.md` + `docs/plans/<date>-prd.md` |
-| `/epic E1` | starting an epic | kickoff from the epic's PRD section: story order, artifact target, demo exit |
+| `/mvp` | day zero, bare or existing repo | section-by-section interview → `ROADMAP.md` + `docs/plans/<date>-prd.md` + `docs/epics/`; brownfield repos get a feature-inventory baseline first |
+| `/epic E1` | starting an epic | kickoff from the epic's PRD section: story order, then exit criteria (artifact, regression command, demo) written into the epic's file |
 | `/delegate` | during the build | implementation to the cheapest capable model tier; judgment stays in the main loop |
 | `/spike` | a design question blocks a story | timeboxed measurement of the candidates → decision matrix → decision folded into the PRD |
 | `/regression` | a feature nears done | layered suite pinning each sub-section's edge cases, then the feature e2e; its green run gates the epic's tick |
 | `/demo-ideas` | an epic ships | 2–3 demos of the current state, with runnable steps |
-| `/wrap-up` | end of any session | propose ticks with evidence, non-accretive doc updates, summary, closing commit |
+| `/wrap-up` | end of any session | propose ticks with evidence, non-accretive doc updates, epic write-up with a try-it-yourself handover, summary, closing commit |
 
 Every pre-MVP epic ends in a shippable artifact — a pushed repo, a published package, a live URL, a cut release. Post-MVP, epics name the feedback loop they open instead.
 
@@ -49,7 +51,7 @@ Each skill is also importable into claude.ai individually from the `.skill` bund
 ## Where things live
 
 - [`ROADMAP.md`](ROADMAP.md) — the epic index and MVP cut; the project's front page and living memory.
-- [`docs/epics/`](docs/epics/) — one file per epic: stories, status, and the spec link.
+- [`docs/epics/`](docs/epics/) — one zero-padded file per epic (`E01-…`): stories, status, spec link, and exit criteria.
 - [`docs/plans/2026-07-15-mvp-roadmap-prd.md`](docs/plans/2026-07-15-mvp-roadmap-prd.md) — the specification each epic links into.
 - [`docs/write-ups/`](docs/write-ups/) — a dated, append-only narrative per completed epic.
 - [`skills/`](skills/) — the collection: `mvp/`, `epic/`, `delegate/`, `spike/`, `regression/`, `demo-ideas/`, `wrap-up/`.
