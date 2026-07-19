@@ -1,6 +1,6 @@
 # product-engineering-skills
 
-[![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
+[![Downloads](https://badgen.net/github/assets-dl/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
 
 > The document is the product.
 
@@ -35,6 +35,9 @@ Two install philosophies, pick by how you want updates:
 | `/regression` | a feature nears done | layered suite pinning each sub-section's edge cases, then the feature e2e; its green run gates the epic's tick |
 | `/demo-ideas` | an epic ships | 2–3 demos of the current state, with runnable steps |
 | `/wrap-up` | end of any session | propose ticks with evidence, non-accretive doc updates, epic write-up with a try-it-yourself handover, summary, closing commit |
+
+> [!TIP]
+> Run the main loop on a top-tier model — Claude Fable, or whatever leads the SWE benchmarks in your harness. The loop spends that model on judgment (specs, review, synthesis) while `/delegate` hands implementation down to cheaper tiers, so the premium buys quality without paying premium for typing.
 
 Every pre-MVP epic ends in a shippable artifact — a pushed repo, a published package, a live URL, a cut release. Post-MVP, epics name the feedback loop they open instead.
 
