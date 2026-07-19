@@ -17,7 +17,8 @@ Close the day so the documents remain the single source of truth and nothing the
 6. **Offer the epic write-up.** If an epic completed this session, offer to draft `docs/write-ups/E<nn>-<slug>.md`: a dated, append-only narrative with a fixed header set — omit a section only when it genuinely doesn't apply, never invent new top-level headers:
    - `## What shipped` — plain language a junior and a senior engineer both follow, leading with what it enables for the developer and the end user, not the mechanics;
    - `## Try it yourself` — the handover: the exact steps the user runs to see the epic's artifact work, from a clean start, with the expected output and one line on what this gives the end user;
-   - `## Evidence` — the executed proof: commands, CI runs, commits, the regression suite's green run;
+   - `## Validation notes` — the developer's handover: how to re-verify what shipped — the regression command, the benchmark command and its budget, the linter, whatever applies from the epic's exit criteria — and what healthy output looks like;
+   - `## Evidence` — the executed proof: commands, CI runs, commits, the regression suite's green run, and the benchmark numbers where the epic named a benchmark — recorded here, they are the baseline later epics regress against;
    - `## Decisions made along the way` — including any spike's decision matrix and its keep-or-discard call (omit if none);
    - `## What surprised` (omit if none);
    - `## Left open` (omit if none).
