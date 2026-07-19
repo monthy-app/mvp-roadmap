@@ -5,7 +5,7 @@ description: Interview the user section-by-section to create or update an MVP de
 
 # MVP Doc
 
-Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process. It is the entrypoint of a collection: the documents it emits are what the companion skills (`/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`) run the build loop against.
+Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process. It is the entrypoint of a collection: the documents it emits are what the companion skills (`/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`, `/regression`) run the build loop against.
 
 There are two modes. Detect which one applies before doing anything else:
 
@@ -60,13 +60,11 @@ The roadmap is derived, not interviewed. Once the design sections exist:
 
 ### Step 3 — Choose the output shape
 
-Default recommendation: **split into `ROADMAP.md` + `PRD.md`** when any of these hold — the full doc would exceed ~400 lines, multiple sessions/agents will work against it, or the project has a repo where the roadmap will churn with every PR. Otherwise a single `MVP.md` (the template's native shape) is fine.
+Default recommendation: **split into `ROADMAP.md` + `PRD.md` + `docs/epics/`** when any of these hold — the full doc would exceed ~400 lines, multiple sessions/agents will work against it, or the project has a repo where the roadmap will churn with every PR. Otherwise a single `MVP.md` (the template's native shape) is fine.
 
 Why split: the roadmap is high-churn state (ticked constantly) while the PRD is low-churn specification (edited only when decisions change). Separating them shrinks the blast radius of every edit — an agent ticking a checkbox never has the PRD in its diff, which is the cheapest structural defense against accretive editing. Links still work: roadmap entries point to `PRD.md#anchor`.
 
-When splitting: `ROADMAP.md` gets the description, hero example, "Usable as" bullets, and the roadmap itself (it doubles as the project's front page); `PRD.md` gets Workflow, Surfaces, Validation, Features, API design, Project structure, Distribution, CI/CD, Additional considerations, Competitive landscape, Tech stack, References, License, Open questions. Delete the template's instructional blockquotes and HTML comments from instantiated docs.
-
-A third shape exists for large roadmaps (~10+ epics, or several sessions ticking concurrently): `ROADMAP.md` becomes a thin index — epic order, one-line outcomes, and the MVP cut — and each epic's stories live in their own `docs/epics/E<n>-<slug>.md` alongside its spec link, so a tick's blast radius is one epic's file. Zero-pad the file prefix (`E01-`, `E02-`) so directory listings sort in epic order past E9. Offer it only when those conditions actually hold; two files is the right default.
+When splitting: `ROADMAP.md` is a thin index — the description, hero example, "Usable as" bullets, epic order with one-line outcomes, and the MVP cut (it doubles as the project's front page). Each epic's stories always live in their own file, `docs/epics/E<nn>-<slug>.md`, alongside its spec link, so a tick's blast radius is one epic's file. Zero-pad the file prefix (`E01-`, `E02-`) — unpadded, `E10` sorts between `E1` and `E2` in every directory listing. `PRD.md` gets Workflow, Surfaces, Validation, Features, API design, Project structure, Distribution, CI/CD, Additional considerations, Competitive landscape, Tech stack, References, License, Open questions. Delete the template's instructional blockquotes and HTML comments from instantiated docs.
 
 Ask the user which shape they want, with your recommendation, as the final interview question.
 
@@ -75,7 +73,7 @@ Ask the user which shape they want, with your recommendation, as the final inter
 The documents are step one of a loop this collection runs end to end. After emitting the files, print the road ahead so the user knows the next command at each stage:
 
 1. `/epic E1` — kick off the first epic against its PRD section; the section is the spec, the epic ends in its named artifact.
-2. Build, using `/delegate` to hand implementation down while judgment stays in the main loop, and `/spike` when a design question blocks a story.
+2. Build, using `/delegate` to hand implementation down while judgment stays in the main loop, `/spike` when a design question blocks a story, and `/regression` to pin each feature before its epic closes.
 3. `/demo-ideas` when an epic ships — every epic should end in something you can show someone.
 4. `/wrap-up` at the end of any working session — propose ticks with evidence, update the docs non-accretively, summarize.
 
