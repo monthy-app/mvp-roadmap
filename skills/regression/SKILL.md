@@ -20,9 +20,10 @@ later epic ships against it.
   The code can change entirely; the suite shouldn't — it fails only when
   behavior changes. A suite that breaks on refactors cries wolf until
   someone deletes it.
-- **You can't pin everything.** Confirm with the user which behaviors
-  matter most — critical paths and complex logic first, not every
-  imaginable case.
+- **You can't pin everything.** The epic's `## Acceptance criteria` are the
+  confirmed behavior list — critical paths and complex logic first, not
+  every imaginable case. Where the project keeps no epic files, confirm
+  the list with the user in chat before writing a test.
 
 ## The Iron Law
 
@@ -46,9 +47,9 @@ sub-section C ──┘
 feature e2e ──▶ one path through the REAL surface (CLI, endpoint, UI flow)
 ```
 
-- **One layer per sub-section** that makes up the feature: focused tests
-  covering that sub-section's edge cases — empty input, boundaries, error
-  paths, ordering/concurrency where they're real.
+- **One layer per acceptance criterion** — the sub-sections that make up
+  the feature: focused tests covering that criterion's edge cases — empty
+  input, boundaries, error paths, ordering/concurrency where they're real.
 - **Then the feature end to end**, exercised the way a user hits it: the
   actual CLI command, the actual HTTP call, the actual UI flow. Minimal
   mocking — an e2e that stubs its own entry surface tests the stub.
@@ -106,8 +107,8 @@ a mock of the handler it claims to test.
 
 Before `/wrap-up` cites the suite as tick evidence:
 
-- [ ] The behavior list was confirmed with the user — critical paths first
-- [ ] Every sub-section named in the epic's plan has its own layer, edge cases included
+- [ ] The behavior list matches the epic's `## Acceptance criteria` (confirmed in chat where no epic file exists)
+- [ ] Every acceptance criterion has its own layer, edge cases included
 - [ ] One e2e runs the whole feature through its real surface
 - [ ] Every test asserts through a public interface and would survive an internal refactor
 - [ ] Each test was observed failing at least once
