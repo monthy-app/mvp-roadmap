@@ -12,17 +12,20 @@ A collection of agent skills (Agent Skills standard, Markdown) that carries a pr
 npx skills add oxmonty/product-engineering-skills --all -g
 ```
 
-All seven skills, every detected agent, user-level, no prompts. Drop `-g` to install into the current project instead (a hackable copy that travels with the repo).
+One command, any agent: [skills.sh](https://skills.sh/oxmonty/product-engineering-skills) detects every agent on your machine — Claude Code, Codex, Cursor, Amp, Cline, OpenCode, Copilot CLI, and ~70 more — and installs all seven skills as hackable Markdown copies, user-level. Drop `-g` to install into the current project instead. Refresh to the latest main anytime:
 
-Two install philosophies, pick by how you want updates:
+```sh
+npx skills update -g
+```
 
-- **Hackable copy** (skills.sh, above) — the skills are copied as plain Markdown into your project or home directory. Edit them freely; they're yours, and they never change under you.
-- **Managed bundle** (Claude Code plugin) — subscribe to the collection and pick up improvements as they ship:
+Two special cases:
 
-  ```
-  /plugin marketplace add oxmonty/product-engineering-skills
-  /plugin install product-engineering-skills@product-engineering-skills
-  ```
+| Surface | How |
+|---|---|
+| **Claude Code plugin** — managed instead of hackable; updates arrive per release | `/plugin marketplace add oxmonty/product-engineering-skills` then `/plugin install product-engineering-skills@product-engineering-skills` |
+| **claude.ai** — one skill at a time | import a `.skill` bundle from the latest [Release](https://github.com/oxmonty/product-engineering-skills/releases/latest) via Settings → Capabilities → Skills |
+
+Compatibility: the skills are plain Agent Skills Markdown with no runtime, so any harness that reads skills can run them. Two graceful degradations elsewhere: the interview's multiple-choice widget falls back to plain-text lettered questions where no question tool exists, and `/delegate`'s Claude model ladder reads as small/mid/large tiers on other stacks.
 
 ## The loop
 
