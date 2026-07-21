@@ -42,7 +42,7 @@ Kick it off with `/mvp` and paste everything you have: product notes, feature li
 | `/wrap-up` | end of any session | propose ticks with evidence, non-accretive doc updates, epic write-up with a try-it-yourself handover, summary, closing commit |
 
 > [!WARNING]
-> The loop assumes a top-tier model in the main loop (Claude Fable, or whatever leads the SWE benchmarks in your harness). It spends that model on judgment (specs, review, synthesis) while `/delegate` hands implementation down to cheaper tiers; run a small model in the main loop and the judgment seat is exactly what degrades.
+> The loop assumes a top-tier model in the main loop (Claude Fable, or whatever leads the SWE benchmarks in your harness). It spends that model on judgment (specs, review, synthesis) while `/delegate` hands implementation down to cheaper tiers; run a small model in the main loop and the judgment seat is exactly what degrades. The split borrows Simon Willison's ["Fable's judgement"](https://simonwillison.net/2026/Jul/3/judgement/): implementation rarely needs the top-tier model; judgment, review, and synthesis stay in the main loop.
 
 Every pre-MVP epic ends in a shippable artifact: a pushed repo, a published package, a live URL, a cut release. Post-MVP, epics name the feedback loop they open instead.
 
