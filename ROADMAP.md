@@ -14,6 +14,7 @@ npx skills add oxmonty/product-engineering-skills --all -g   # install the colle
 Usable as:
 - **Claude Code skills**: user-invoked `/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`, `/regression`; update mode is also model-invoked for tick-offs and doc edits.
 - **Packaged `.skill` bundles**: one per skill, attached to GitHub Releases for claude.ai import.
+- **Claude Code plugin**: `/plugin marketplace add oxmonty/product-engineering-skills` installs the whole loop as one managed bundle.
 - **Any Agent-Skills harness**: Codex and others, via the skills.sh installer.
 
 ---

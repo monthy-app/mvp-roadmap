@@ -7,3 +7,18 @@
 - [x] Ship `skills/regression/SKILL.md`: per-sub-section layers with edge cases, feature e2e through the real surface, framework choice with install permission, behavior-first pinning
 - [x] Wire the loop: `/epic` names the checks and builds them via `/regression`; `/wrap-up` gates epic ticks on the green run
 - [x] List `/regression` across the README, plugin manifests, and PRD
+
+## Acceptance criteria
+
+<!-- retrofitted 2026-07-21: written after completion from the linked PRD section and shipped behavior -->
+
+- `/regression` builds one test layer per acceptance criterion covering its edge cases, then the feature end to end through its real surface
+- Framework choice reuses the repo's runner first; a new one is installed only with permission
+- Tests pin behavior through public interfaces and every test is observed failing at least once
+- The one-command green run it leaves behind is the tick evidence `/wrap-up` demands
+
+## Exit criteria
+
+- Artifact: `skills/regression` in release `v0.4.0`
+- Regression: CI quality gates; `/wrap-up` gates epic ticks on the suite's green run (wired in `skills/wrap-up/SKILL.md`)
+- Demo: `/regression` on a completed epic leaves a one-command suite behind
