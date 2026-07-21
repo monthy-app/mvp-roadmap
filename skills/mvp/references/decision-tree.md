@@ -64,10 +64,10 @@ Throughout: one decision point per question-tool call, always with a recommended
 
 Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmation of the epic order. On a brownfield repo (feature inventory in Step 0), E1 is characterization coverage of the existing baseline rather than a walking skeleton — see SKILL.md. Every epic above the MVP line carries a shippable artifact as its exit criterion (pushed repo, published package, live URL, cut release); epics below the line name the feedback loop they open (who uses it, what signal is collected).
 
-## Phase 10 — Closing → *License, Open questions, output shape*
+## Phase 10 — Closing → *License, Open questions*
 
-Nothing in this phase is asked until the Phase 9 roadmap is confirmed — license, open questions, and output shape are the interview's last three moves, in that order, shape always the final question. (Interviews reliably drift toward asking license early; hold the boundary.)
+Nothing in this phase is asked until the Phase 9 roadmap is confirmed — license then open questions are the interview's last two moves, in that order. (Interviews reliably drift toward asking license early; hold the boundary.)
 
 - Q: license, with a recommendation fitted to the product's adoption strategy; note the decide-before-contributions warning.
 - Compile Open questions: only items with a forcing function, each annotated with the decision it blocks and what evidence resolves it. Anything resolved during the interview does not appear here.
-- Q: output shape — single `MVP.md` vs `ROADMAP.md` + `PRD.md` split (recommendation logic in SKILL.md Step 3).
+- The output shape is fixed (SKILL.md Step 3) — emit `ROADMAP.md` + the dated PRD + `docs/epics/` without asking.

@@ -35,5 +35,9 @@ Overall pass requires every **critical** item to pass.
 - **Roadmap derived last.** The roadmap was synthesized after the design
   sections, E1 is a walking skeleton, and the MVP line was confirmed with the
   player rather than inferred silently.
-- **Output shape asked last.** The single-file vs split choice was the closing
-  question.
+- **Fixed output shape, unasked.** The interview closed without a shape
+  question; the docs were emitted as `ROADMAP.md` + a dated PRD +
+  `docs/epics/` files regardless of project size.
+- **Context above every question.** Each question was preceded by a sentence
+  or two of plain-language framing — what surfaced the decision and what it
+  affects — not fired bare.
